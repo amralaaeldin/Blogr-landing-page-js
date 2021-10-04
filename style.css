@@ -43,9 +43,8 @@
 
 body {
   font-family: "Overpass", sans-serif;
-  max-width: 100%;
-  max-width: 2000px;
   overflow-x: hidden;
+  max-width: 2000px;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -180,7 +179,6 @@ header .container nav ul .head {
   position: relative;
   height: 20px;
   width: 90px;
-  overflow: hidden;
 }
 header .container nav ul .head:not(:last-of-type) {
   margin-right: 14px;
@@ -571,8 +569,7 @@ section {
   align-items: center;
   position: relative;
   width: 100%;
-  height: 70vh;
-  max-height: 850px;
+  height: fit-content;
   padding: var(--main-y-padding) 0;
   margin: calc(var(--main-y-margin) * 2) 0;
 }
@@ -599,7 +596,7 @@ section:nth-of-type(2) {
   border-bottom-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   height: 250px;
-  margin: calc(var(--main-y-margin) * 3.5) 0;
+  margin: calc(var(--main-y-margin) * 3) 0;
 }
 
 section:nth-of-type(2) h3 {
@@ -613,7 +610,7 @@ img {
 section:nth-of-type(1) img.desktop {
   position: absolute;
   width: calc(62% - 100px);
-  left: 58%;
+  left: 61.1%;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -621,7 +618,6 @@ section:nth-of-type(1) img.desktop {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   z-index: -1;
-  object-fit: cover;
 }
 section:nth-of-type(1) img.mobile {
   display: none;
@@ -657,7 +653,7 @@ section:nth-of-type(2) .pattern img {
 section:nth-of-type(3) img.desktop {
   position: absolute;
   width: calc(62% - 100px);
-  right: 58%;
+  right: 61.1%;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -665,7 +661,6 @@ section:nth-of-type(3) img.desktop {
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
   z-index: -1;
-  object-fit: cover;
 }
 section:nth-of-type(3) img.mobile {
   display: none;
