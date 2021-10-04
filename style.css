@@ -182,6 +182,7 @@ header .container nav ul .head {
   position: relative;
   height: 20px;
   width: 90px;
+  min-width: fit-content;
 }
 header .container nav ul .head:not(:last-of-type) {
   margin-right: 14px;
