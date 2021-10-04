@@ -76,7 +76,6 @@ closeIcon.addEventListener("click", () => {
 // close group when click outside (mobile)
 nav.addEventListener("click", (e) => {
   if (e.target.tagName != "UL" && e.target.tagName != "LI") {
-    console.log("worked now!");
     headEle.forEach((ele) => {
       ele.classList.remove("active");
     });
