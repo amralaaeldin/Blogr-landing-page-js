@@ -81,6 +81,8 @@ header {
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
+  overflow-x: hidden;
+
 }
 
 header .btn {
@@ -117,7 +119,7 @@ header .list-close {
   right: 25vw;
 }
 @media (max-width: 767px) {
-   body {
+  body {
     max-width: 100%;
   }
   .bg-intro {
@@ -159,11 +161,6 @@ header .container nav {
   align-items: center;
   margin-left: 40px;
 }
- header .container nav ::selection {
-  background-color: transparent;
-} 
-
-/* start nav ul */
 
 header .container nav ul {
   display: inline-block;
@@ -182,7 +179,6 @@ header .container nav ul .head {
   position: relative;
   height: 20px;
   width: 90px;
-  min-width: fit-content;
 }
 header .container nav ul .head:not(:last-of-type) {
   margin-right: 14px;
@@ -352,6 +348,7 @@ header .container nav .btns .btn.signup:hover {
     align-items: center;
   }
   header .container nav ul .head {
+    min-width: fit-content;
     width: 50%;
     max-width: 500px;
     height: auto;
