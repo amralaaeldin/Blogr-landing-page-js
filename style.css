@@ -159,9 +159,9 @@ header .container nav {
   align-items: center;
   margin-left: 40px;
 }
-/* header .container nav ::selection {
+ header .container nav ::selection {
   background-color: transparent;
-} */
+} 
 
 /* start nav ul */
 
