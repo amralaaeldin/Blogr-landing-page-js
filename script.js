@@ -9,6 +9,19 @@ const groupEle = [...group];
 const openIcon = document.querySelector(".list-open");
 const closeIcon = document.querySelector(".list-close");
 
+// make sections responsive to images
+const imgBox = document.querySelectorAll(".img-desktop");
+const section = document.querySelectorAll(
+  "section:nth-of-type(1),section:nth-of-type(3)"
+);
+
+for (let i = 0; i < imgBox.length; i++) {
+  if (section[i].offsetHeight < imgBox[i].offsetHeight) {
+    let height = imgBox[i].offsetHeight;
+    section[i].style.height = height + "px";
+  }
+}
+
 // desktop
 // rest is close when outside
 headEle.forEach((ele) => {
