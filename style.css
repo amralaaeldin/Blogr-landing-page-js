@@ -72,17 +72,16 @@ header {
   width: 100%;
   background-color: hsl(13, 100%, 72%);
   position: relative;
-  background-image: linear-gradient(
-    to right,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%)
-  );
+  background-image: url(images/bg-pattern-intro.svg),
+    linear-gradient(to right, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
   z-index: 0;
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
   overflow-x: hidden;
-
+  background-repeat: no-repeat;
+  background-position: 20% 50%, center;
+  background-size: 175%;
 }
 
 header .btn {
@@ -100,43 +99,6 @@ header .list-open {
 }
 header .list-close {
   display: none;
-}
-
-/* repeated here and in media */
-.bg-intro {
-  overflow: hidden;
-  position: absolute;
-  width: 200vw;
-  z-index: 1;
-  height: 434px;
-  bottom: 0;
-  border-bottom-left-radius: var(--border-radius);
-}
-.intro-pattern {
-  width: 100%;
-  position: absolute;
-  bottom: -84vw;
-  right: 25vw;
-}
-@media (max-width: 767px) {
-  body {
-    max-width: 100%;
-  }
-  .bg-intro {
-    overflow: hidden;
-    position: absolute;
-    width: 305vw;
-    z-index: 1;
-    height: 580px;
-    border-bottom-left-radius: var(--border-radius);
-    bottom: 0;
-  }
-  .intro-pattern {
-    width: 100%;
-    position: absolute;
-    bottom: -116vw;
-    right: 90vw;
-  }
 }
 
 header .container {
@@ -286,6 +248,10 @@ header .container nav .btns .btn.signup:hover {
 }
 
 @media (max-width: 767px) {
+  header {
+    background-position: 25% 40%, center;
+    background-size: 175%;
+  }
   header .list-open {
     display: block;
     justify-self: end;
@@ -474,6 +440,12 @@ header .container nav .btns .btn.signup:hover {
   }
 }
 
+@media (max-width: 535px) {
+  header {
+    background-position: 40% 40%, center;
+    background-size: 310%;
+  }
+}
 /* landing */
 header .landing {
   align-self: center;
@@ -607,18 +579,24 @@ img {
   z-index: 0;
 }
 
-section:nth-of-type(1) img.desktop {
+section:nth-of-type(1) .img-desktop {
   position: absolute;
-  width: calc(62% - 100px);
-  left: 61.1%;
+  width: 45%;
+  right: 0;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  z-index: -1;
+  overflow: hidden;
 }
+
+section:nth-of-type(1) .img-desktop img {
+  width: 100%;
+  margin-left: 27%;
+}
+
 section:nth-of-type(1) img.mobile {
   display: none;
 }
@@ -650,18 +628,23 @@ section:nth-of-type(2) .pattern img {
   bottom: 117%;
   height: auto;
 }
-section:nth-of-type(3) img.desktop {
+section:nth-of-type(3) .img-desktop {
   position: absolute;
-  width: calc(62% - 100px);
-  right: 61.1%;
+  width: 45%;
+  left: 0;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
   -moz-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   -o-transform: translateY(-50%);
-  z-index: -1;
+  overflow: hidden;
 }
+section:nth-of-type(3) .img-desktop img {
+  width: 100%;
+  margin-left: -28%;
+}
+
 section:nth-of-type(3) img.mobile {
   display: none;
 }
