@@ -78,7 +78,6 @@ header {
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
-  overflow-x: hidden;
   background-repeat: no-repeat;
   background-position: 20% 50%, center;
   background-size: 175%;
