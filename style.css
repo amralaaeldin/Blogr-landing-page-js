@@ -270,6 +270,11 @@ header .container nav ul .head .group li {
   position: relative;
   font-weight: 300;
 }
+
+header .container nav ul .head .group li a {
+  color: hsl(207, 13%, 34%);
+}
+
 header .container nav ul .head .group li:not(:last-of-type) {
   margin-bottom: calc(var(--main-y-margin) / 4);
 }
@@ -452,7 +457,7 @@ header .container nav .btns .btn.signup:hover {
     font-weight: 600;
     width: 50%;
   }
-
+  
   /* end nav media ul */
 
   header .container nav .divider {
