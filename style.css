@@ -187,6 +187,7 @@ header .container nav ul {
 header .container nav > ul {
   display: flex;
   width: fit-content;
+  gap: 14px;
 }
 
 header .container nav ul .head {
@@ -197,9 +198,7 @@ header .container nav ul .head {
   height: 20px;
   width: 90px;
 }
-header .container nav ul .head:not(:last-of-type) {
-  margin-right: 14px;
-}
+
 header .container nav ul .head:hover {
   text-decoration: underline;
   cursor: pointer;

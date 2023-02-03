@@ -1,10 +1,7 @@
 const headEle = [...document.querySelectorAll("header .container nav ul .head")];
 const nav = document.querySelector("header .container nav");
 const header = document.querySelector("header");
-const group = document.querySelectorAll(
-  "header .container nav ul .head .group"
-);
-const groupEle = [...group];
+const groupEle = [...document.querySelectorAll("header .container nav ul .head .group")];
 const openIcon = document.querySelector(".list-open");
 const closeIcon = document.querySelector(".list-close");
 
@@ -22,19 +19,17 @@ for (let i = 0; i < imgBox.length; i++) {
 }
 
 // desktop
-// rest is close when outside
-headEle.forEach((ele) => {
-  ele.addEventListener("click", () => {
-    if (!ele.classList.contains("active")) {
-      headEle.forEach((ele) => {
-        ele.classList.remove("active");
-      });
-      ele.classList.add("active");
-    } else if (ele.classList.contains("active")) {
-      ele.classList.remove("active");
-    }
-  });
-});
+nav.addEventListener('click', (e) => {
+  if (e.target.classList.contains('head') || e.target.parentElement.classList.contains('head')) {
+    headEle.forEach((ele) => {
+      if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target) || (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement)) {
+        ele.classList.remove("active")
+      }
+    });
+    if (e.target.nodeName.toLowerCase() === 'img') return e.target.parentElement.classList.toggle("active");
+    e.target.classList.toggle("active");
+  }
+})
 
 // mobile
 // rest is close when outside
