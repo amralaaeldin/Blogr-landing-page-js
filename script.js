@@ -31,37 +31,24 @@ nav.addEventListener('click', (e) => {
   }
 })
 
+// close all when click outside (desktop)
+document.addEventListener("click", (e) => {
+  if (
+    !e.target.classList.contains("group") &&
+    !e.target.classList.contains("active")
+  ) {
+    headEle.forEach((ele) => {
+      ele.classList.remove("active");
+    });
+  }
+});
+
 // mobile
-// rest is close when outside
-// search in classlist array or string about the class name
-// make closing [not sure]
 openIcon.addEventListener("click", () => {
   if (header.className != "active" && nav.className != "active") {
     header.classList.add("active");
     nav.classList.add("active");
   }
-});
-
-headEle.forEach((ele, index) => {
-  ele.addEventListener("click", () => {
-    // here
-    if (
-      header.className == "active" &&
-      nav.className == "active" &&
-      !groupEle[index].classList.contains("active")
-    ) {
-      groupEle.forEach((ele) => {
-        ele.classList.remove("active");
-      });
-      groupEle[index].classList.add("active");
-    } else if (
-      header.className == "active" &&
-      nav.className == "active" &&
-      groupEle[index].classList.contains("active")
-    ) {
-      groupEle[index].classList.remove("active");
-    }
-  });
 });
 
 function close() {
@@ -74,11 +61,23 @@ function close() {
     ele.classList.remove("active");
   });
 }
+
 closeIcon.addEventListener("click", () => {
   if (header.className == "active" && nav.className == "active") {
     close();
   }
 });
+
+nav.addEventListener('click', (e) => {
+  if (e.target.classList.contains('head') || e.target.parentElement.classList.contains('head')) {
+    if (header.className == "active" && nav.className == "active") {
+      groupEle.forEach((ele) => {
+        if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target.querySelector('.group')) || (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement.querySelector('.group'))) ele.classList.remove("active");
+        else ele.classList.toggle("active")
+      });
+    }
+  }
+})
 
 // close group when click outside (mobile)
 nav.addEventListener("click", (e) => {
@@ -104,18 +103,5 @@ document.addEventListener("click", (e) => {
     e.target.tagName != "LI"
   ) {
     close();
-  }
-});
-
-// close all when click outside (desktop)
-document.addEventListener("click", (e) => {
-  if (
-    !e.target.classList.contains("group") &&
-    !e.target.classList.contains("active")
-  ) {
-    // close all when click outside (desktop)
-    headEle.forEach((ele) => {
-      ele.classList.remove("active");
-    });
   }
 });
