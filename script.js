@@ -1,5 +1,4 @@
-const head = document.querySelectorAll("header .container nav ul .head");
-const headEle = [...head];
+const headEle = [...document.querySelectorAll("header .container nav ul .head")];
 const nav = document.querySelector("header .container nav");
 const header = document.querySelector("header");
 const group = document.querySelectorAll(
@@ -120,7 +119,7 @@ document.addEventListener("click", (e) => {
     !e.target.classList.contains("active")
   ) {
     // close all when click outside (desktop)
-    head.forEach((ele) => {
+    headEle.forEach((ele) => {
       ele.classList.remove("active");
     });
   }

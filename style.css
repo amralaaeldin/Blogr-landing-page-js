@@ -335,6 +335,7 @@ header .container nav .btns .btn.signup:hover {
     display: block;
     justify-self: end;
     cursor: pointer;
+    width: 28px;
   }
 
   header .container {
@@ -457,7 +458,7 @@ header .container nav .btns .btn.signup:hover {
     font-weight: 600;
     width: 50%;
   }
-  
+
   /* end nav media ul */
 
   header .container nav .divider {
