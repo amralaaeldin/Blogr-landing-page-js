@@ -20,13 +20,16 @@ for (let i = 0; i < imgBox.length; i++) {
 
 // desktop
 nav.addEventListener('click', (e) => {
-  if (e.target.classList.contains('head') || e.target.parentElement.classList.contains('head')) {
+  if (e.target.classList.contains('head') ||
+    e.target.parentElement.classList.contains('head')) {
     headEle.forEach((ele) => {
-      if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target) || (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement)) {
+      if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target) ||
+        (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement)) {
         ele.classList.remove("active")
       }
     });
-    if (e.target.nodeName.toLowerCase() === 'img') return e.target.parentElement.classList.toggle("active");
+    if (e.target.nodeName.toLowerCase() === 'img')
+      return e.target.parentElement.classList.toggle("active");
     e.target.classList.toggle("active");
   }
 })
@@ -35,7 +38,11 @@ nav.addEventListener('click', (e) => {
 document.addEventListener("click", (e) => {
   if (
     !e.target.classList.contains("group") &&
-    !e.target.classList.contains("active")
+    !e.target.classList.contains("active") &&
+    !e.target.classList.contains("arrow-light") &&
+    !e.target.classList.contains("arrow-dark") &&
+    e.target.tagName != "LI" &&
+    e.target.tagName != "UL"
   ) {
     headEle.forEach((ele) => {
       ele.classList.remove("active");
@@ -63,7 +70,7 @@ function close() {
 }
 
 closeIcon.addEventListener("click", () => {
-  if (header.className == "active" && nav.className == "active") {
+  if (header.classList.contains("active") && nav.classList.contains("active")) {
     close();
   }
 });
@@ -72,7 +79,9 @@ nav.addEventListener('click', (e) => {
   if (e.target.classList.contains('head') || e.target.parentElement.classList.contains('head')) {
     if (header.className == "active" && nav.className == "active") {
       groupEle.forEach((ele) => {
-        if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target.querySelector('.group')) || (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement.querySelector('.group'))) ele.classList.remove("active");
+        if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target.querySelector('.group')) ||
+          (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement.querySelector('.group')))
+          ele.classList.remove("active");
         else ele.classList.toggle("active")
       });
     }
@@ -81,7 +90,11 @@ nav.addEventListener('click', (e) => {
 
 // close group when click outside (mobile)
 nav.addEventListener("click", (e) => {
-  if (e.target.tagName != "UL" && e.target.tagName != "LI") {
+  if (e.target.tagName != "UL" &&
+    e.target.tagName != "LI" &&
+    !e.target.classList.contains("arrow-light") &&
+    !e.target.classList.contains("arrow-dark")
+  ) {
     headEle.forEach((ele) => {
       ele.classList.remove("active");
     });
@@ -100,6 +113,8 @@ document.addEventListener("click", (e) => {
     !e.target.classList.contains("btns") &&
     !e.target.classList.contains("btn") &&
     !e.target.classList.contains("divider") &&
+    !e.target.classList.contains("arrow-light") &&
+    !e.target.classList.contains("arrow-dark") &&
     e.target.tagName != "LI"
   ) {
     close();
