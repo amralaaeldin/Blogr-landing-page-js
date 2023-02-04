@@ -21,7 +21,7 @@ for (let i = 0; i < imgBox.length; i++) {
 // desktop
 nav.addEventListener('click', (e) => {
   if (e.target.classList.contains('head') ||
-    e.target.parentElement.classList.contains('head')) {
+    (e.target.tagName != "UL" && e.target.parentElement.classList.contains('head'))) {
     headEle.forEach((ele) => {
       if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target) ||
         (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement)) {
@@ -37,7 +37,6 @@ nav.addEventListener('click', (e) => {
 // close all when click outside (desktop)
 document.addEventListener("click", (e) => {
   if (
-    !e.target.classList.contains("group") &&
     !e.target.classList.contains("active") &&
     !e.target.classList.contains("arrow-light") &&
     !e.target.classList.contains("arrow-dark") &&
@@ -76,12 +75,13 @@ closeIcon.addEventListener("click", () => {
 });
 
 nav.addEventListener('click', (e) => {
-  if (e.target.classList.contains('head') || e.target.parentElement.classList.contains('head')) {
+  if (e.target.classList.contains('head') || (e.target.tagName != "UL" && e.target.parentElement.classList.contains('head'))) {
     if (header.className == "active" && nav.className == "active") {
       groupEle.forEach((ele) => {
         if ((e.target.nodeName.toLowerCase() !== 'img' && ele !== e.target.querySelector('.group')) ||
-          (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement.querySelector('.group')))
+          (e.target.nodeName.toLowerCase() === 'img' && ele !== e.target.parentElement.querySelector('.group'))) {
           ele.classList.remove("active");
+        }
         else ele.classList.toggle("active")
       });
     }
@@ -107,7 +107,6 @@ nav.addEventListener("click", (e) => {
 // close all when click outside (mobile)
 document.addEventListener("click", (e) => {
   if (
-    !e.target.classList.contains("group") &&
     !e.target.classList.contains("active") &&
     !e.target.classList.contains("list-open") &&
     !e.target.classList.contains("btns") &&
@@ -115,7 +114,8 @@ document.addEventListener("click", (e) => {
     !e.target.classList.contains("divider") &&
     !e.target.classList.contains("arrow-light") &&
     !e.target.classList.contains("arrow-dark") &&
-    e.target.tagName != "LI"
+    e.target.tagName != "LI" &&
+    e.target.tagName != "UL"
   ) {
     close();
   }
