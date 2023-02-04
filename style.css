@@ -39,18 +39,21 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
 /* Small */
 @media (min-width: 768px) {
   .container {
     width: 730px;
   }
 }
+
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 950px;
   }
 }
+
 /* Large */
 @media (min-width: 1200px) {
   .container {
@@ -75,6 +78,7 @@ body {
 h2 {
   color: hsl(208, 49%, 24%);
 }
+
 h3 {
   color: hsl(208, 49%, 24%);
   padding-bottom: calc(var(--main-y-padding) / 2);
@@ -89,11 +93,9 @@ header {
   width: 100%;
   background-color: hsl(13, 100%, 72%);
   position: relative;
-  background-image: linear-gradient(
-    to right,
-    hsl(13, 100%, 72%),
-    hsl(353, 100%, 62%)
-  );
+  background-image: linear-gradient(to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%));
   z-index: 0;
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
@@ -113,6 +115,7 @@ header h3 {
 header .list-open {
   display: none;
 }
+
 header .list-close {
   display: none;
 }
@@ -127,16 +130,19 @@ header .list-close {
   bottom: 0;
   border-bottom-left-radius: var(--border-radius);
 }
+
 .intro-pattern {
   width: 100%;
   position: absolute;
   bottom: -84vw;
   right: 25vw;
 }
+
 @media (max-width: 767px) {
   body {
     max-width: 100%;
   }
+
   .bg-intro {
     overflow: hidden;
     position: absolute;
@@ -146,6 +152,7 @@ header .list-close {
     border-bottom-left-radius: var(--border-radius);
     bottom: 0;
   }
+
   .intro-pattern {
     width: 100%;
     position: absolute;
@@ -183,7 +190,8 @@ header .container nav ul {
   position: relative;
   user-select: none;
 }
-header .container nav > ul {
+
+header .container nav>ul {
   display: flex;
   width: fit-content;
   gap: 14px;
@@ -247,6 +255,7 @@ header .container nav ul .head .group {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 /* repeated here and in media */
 header .container nav ul .head.active .group {
   max-height: 250px;
@@ -275,6 +284,7 @@ header .container nav ul .head.active .group {
   -o-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
   -webkit-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
 }
+
 header .container nav ul .head .group li {
   color: hsl(207, 13%, 34%);
   display: block;
@@ -290,10 +300,12 @@ header .container nav ul .head .group li a {
 header .container nav ul .head .group li:not(:last-of-type) {
   margin-bottom: calc(var(--main-y-margin) / 4);
 }
+
 header .container nav ul .head .group li:hover {
   color: hsl(208, 49%, 24%);
   font-weight: 600;
 }
+
 /* end nav ul */
 
 header .container nav .divider {
@@ -303,16 +315,20 @@ header .container nav .divider {
 header .container nav .btns {
   justify-self: end;
 }
+
 header .container nav .btns .btn:not(:last-of-type) {
   margin-right: var(--btn-margin);
 }
+
 header .container nav .btns .btn.login {
   background-color: transparent;
   color: #f2f2f2;
 }
+
 header .container nav .btns .btn.login:hover {
   font-weight: 500;
 }
+
 header .container nav .btns .btn.signup {
   background-color: #fff;
   color: hsl(356, 100%, 66%);
@@ -325,6 +341,7 @@ header .container nav .btns .btn.signup {
   -o-border-radius: 22px;
   border: 1.4px solid #fff;
 }
+
 header .container nav .btns .btn.signup:hover {
   background-color: hsl(355, 100%, 74%);
   color: #fff;
@@ -337,12 +354,15 @@ header .container nav .btns .btn.signup:hover {
     justify-self: end;
     cursor: pointer;
   }
+
   header .list-close {
     display: none;
   }
+
   header.active .list-open {
     display: none;
   }
+
   header.active .list-close {
     display: block;
     justify-self: end;
@@ -357,6 +377,7 @@ header .container nav .btns .btn.signup:hover {
   header .container nav {
     display: none;
   }
+
   header .container nav .btns {
     display: none;
   }
@@ -394,6 +415,7 @@ header .container nav .btns .btn.signup:hover {
     width: 50%;
     align-items: center;
   }
+
   header .container nav ul .head {
     min-width: fit-content;
     width: 50%;
@@ -404,6 +426,7 @@ header .container nav .btns .btn.signup:hover {
     color: hsl(208, 49%, 24%);
     padding-bottom: calc(var(--main-y-padding) / 4);
   }
+
   header .container nav ul .head.active {
     color: hsl(207, 13%, 34%);
   }
@@ -415,6 +438,7 @@ header .container nav .btns .btn.signup:hover {
   header .container nav ul .head .arrow-light {
     display: none;
   }
+
   header .container nav ul .head .arrow-dark {
     display: inline-block;
     width: 10px;
@@ -451,6 +475,7 @@ header .container nav .btns .btn.signup:hover {
   header .container nav ul .head:hover {
     text-decoration: none;
   }
+
   header .container nav ul .head.active .group.active {
     top: 10px;
     z-index: 115;
@@ -481,6 +506,7 @@ header .container nav .btns .btn.signup:hover {
     width: calc(100% - 40px);
     max-width: 500px;
   }
+
   header .container nav .btns {
     display: flex;
     flex-direction: column;
@@ -488,6 +514,7 @@ header .container nav .btns .btn.signup:hover {
     text-align: center;
     justify-content: center;
   }
+
   header .container nav .btns .btn {
     font-family: "Overpass", sans-serif;
     display: block;
@@ -495,26 +522,28 @@ header .container nav .btns .btn.signup:hover {
     font-weight: 600;
     font-size: 1.1em;
   }
+
   header .container nav .btns .btn.login {
     color: hsl(208, 49%, 24%);
     margin-top: calc(var(--main-y-margin) / 4);
     margin-bottom: calc(var(--main-y-margin) / 3);
   }
+
   header .container nav .btns .btn.login:hover {
     font-weight: 600;
     color: hsl(207, 13%, 34%);
   }
+
   header .container nav .btns .btn.signup {
     font-weight: 600;
-    background-image: linear-gradient(
-      to right,
-      hsl(13, 100%, 72%),
-      hsl(353, 100%, 62%)
-    );
+    background-image: linear-gradient(to right,
+        hsl(13, 100%, 72%),
+        hsl(353, 100%, 62%));
     padding: 6px 16px;
     color: #fff;
     border: none;
   }
+
   header .container nav .btns .btn.signup:hover {
     border: none;
     background-color: hsl(355, 100%, 74%);
@@ -538,14 +567,17 @@ header .landing .container {
   flex-direction: column;
   padding: var(--main-y-padding) 0;
 }
+
 header .landing h1 {
   text-align: center;
   padding-bottom: calc(var(--main-y-padding) / 2);
 }
+
 header .landing p {
   text-align: center;
   padding-bottom: calc(var(--main-y-padding) / 2);
 }
+
 header .landing .btns {
   display: flex;
   justify-content: center;
@@ -567,11 +599,13 @@ header .landing .btns .btn.trial {
   -o-border-radius: 22px;
   border: 1.4px solid #fff;
 }
+
 header .landing .btns .btn.trial:hover {
   background-color: hsl(355, 100%, 74%);
   color: #fff;
   border-color: hsl(355, 100%, 74%);
 }
+
 header .landing .btns .btn.more {
   background-color: transparent;
   color: #fff;
@@ -584,6 +618,7 @@ header .landing .btns .btn.more {
   -o-border-radius: 22px;
   border: 1.4px solid #fff;
 }
+
 header .landing .btns .btn.more:hover {
   background-color: #fff;
   color: hsl(356, 100%, 66%);
@@ -592,15 +627,18 @@ header .landing .btns .btn.more:hover {
 header .landing {
   position: relative;
 }
+
 header .landing h1,
 header .landing p {
   font-family: "Overpass", sans-serif;
 }
+
 @media (max-width: 767px) {
   header .landing {
     padding-top: var(--main-y-padding);
     padding-bottom: calc(var(--main-y-padding) * 2);
   }
+
   header .landing .container {
     padding: 0 20px;
   }
@@ -611,6 +649,7 @@ h2 {
   padding-top: calc(var(--main-y-padding) * 2);
   text-align: center;
 }
+
 section {
   color: hsl(207, 13%, 34%);
   display: flex;
@@ -621,6 +660,7 @@ section {
   padding: var(--main-y-padding) 0;
   margin: calc(var(--main-y-margin) * 2) 0;
 }
+
 section .container .feature {
   width: 50%;
   margin-left: auto;
@@ -634,12 +674,11 @@ section:nth-of-type(1) .container .feature {
   margin-right: auto;
   margin-left: unset;
 }
+
 section:nth-of-type(2) {
-  background-image: linear-gradient(
-    to right,
-    hsl(237, 17%, 21%),
-    hsl(237, 23%, 32%)
-  );
+  background-image: linear-gradient(to right,
+      hsl(237, 17%, 21%),
+      hsl(237, 23%, 32%));
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -650,6 +689,7 @@ section:nth-of-type(2) {
 section:nth-of-type(2) h3 {
   color: hsl(0, 0%, 100%);
 }
+
 /* images & layout */
 img {
   z-index: 0;
@@ -667,6 +707,7 @@ section:nth-of-type(1) img.desktop {
   -o-transform: translateY(-50%);
   z-index: -1;
 }
+
 section:nth-of-type(1) img.mobile {
   display: none;
 }
@@ -677,11 +718,13 @@ section:nth-of-type(2) .container {
   align-items: center;
   padding-left: 0;
 }
+
 section:nth-of-type(2) .phones {
   position: relative;
   width: 40%;
   z-index: 100;
 }
+
 section:nth-of-type(2) .pattern {
   z-index: 0;
   width: 50%;
@@ -691,6 +734,7 @@ section:nth-of-type(2) .pattern {
   bottom: 0;
   overflow: hidden;
 }
+
 section:nth-of-type(2) .pattern img {
   width: 100%;
   position: relative;
@@ -698,6 +742,7 @@ section:nth-of-type(2) .pattern img {
   bottom: 117%;
   height: auto;
 }
+
 section:nth-of-type(3) img.desktop {
   position: absolute;
   width: calc(62% - 100px);
@@ -710,6 +755,7 @@ section:nth-of-type(3) img.desktop {
   -o-transform: translateY(-50%);
   z-index: -1;
 }
+
 section:nth-of-type(3) img.mobile {
   display: none;
 }
@@ -725,6 +771,7 @@ section:nth-of-type(3) img.mobile {
     padding: calc(var(--main-y-padding) / 2) 0;
     margin: 0;
   }
+
   section .container .feature {
     width: 100%;
     display: block;
@@ -772,12 +819,12 @@ section:nth-of-type(3) img.mobile {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
   }
+
   section:nth-of-type(2) .pattern img {
     width: 100%;
     position: relative;
     left: 50%;
     display: block;
-    /* bottom: 10%; */
     margin-bottom: 40%;
     height: auto;
   }
@@ -789,6 +836,7 @@ section:nth-of-type(3) img.mobile {
     align-items: center;
     position: relative;
   }
+
   section:nth-of-type(2) .container .phones {
     width: 90%;
     max-width: 450px;
@@ -819,26 +867,32 @@ footer .container ul h3 {
   margin-bottom: 15px;
   color: #fff;
 }
+
 footer .container ul li:not(:last-of-type) {
   margin-bottom: 10px;
   cursor: pointer;
 }
+
 footer .container ul li:hover {
   text-decoration: underline;
 }
+
 @media (max-width: 767px) {
   footer .container {
     grid-template-columns: 1fr;
     text-align: center;
     padding-top: calc(var(--main-y-padding) * 2);
   }
-  footer .container > a {
+
+  footer .container>a {
     height: 50px;
   }
+
   footer .container .logo {
     justify-self: center;
     margin-bottom: var(--main-y-margin);
   }
+
   footer .container ul {
     margin-bottom: var(--main-y-margin);
   }
