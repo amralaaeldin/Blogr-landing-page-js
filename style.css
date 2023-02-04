@@ -93,9 +93,11 @@ header {
   width: 100%;
   background-color: hsl(13, 100%, 72%);
   position: relative;
-  background-image: linear-gradient(to right,
-      hsl(13, 100%, 72%),
-      hsl(353, 100%, 62%));
+  background-image: linear-gradient(
+    to right,
+    hsl(13, 100%, 72%),
+    hsl(353, 100%, 62%)
+  );
   z-index: 0;
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
@@ -191,7 +193,7 @@ header .container nav ul {
   user-select: none;
 }
 
-header .container nav>ul {
+header .container nav > ul {
   display: flex;
   width: fit-content;
   gap: 14px;
@@ -278,11 +280,11 @@ header .container nav ul .head.active .group {
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
   box-shadow: 1px 1px 5px 3px #0000001a;
-  transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
-  -moz-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
-  -ms-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
-  -o-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
-  -webkit-transition: max-height 1s ease-out, padding 1s ease-out 0.2s;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out 0.2s;
+  -moz-transition: max-height 0.5s ease-out, padding 0.5s ease-out 0.2s;
+  -ms-transition: max-height 0.5s ease-out, padding 0.5s ease-out 0.2s;
+  -o-transition: max-height 0.5s ease-out, padding 0.5s ease-out 0.2s;
+  -webkit-transition: max-height 0.5s ease-out, padding 0.5s ease-out 0.2s;
 }
 
 header .container nav ul .head .group li {
@@ -375,29 +377,16 @@ header .container nav .btns .btn.signup:hover {
   }
 
   header .container nav {
-    display: none;
-  }
-
-  header .container nav .btns {
-    display: none;
-  }
-
-  header .container nav.active {
-    font-family: "Overpass", sans-serif;
     position: absolute;
     width: calc(100% - 40px);
     left: 50%;
     top: 110px;
-    transform: translateX(-50%);
+    font-family: "Overpass", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #fff;
     margin-left: 0;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
+    background-color: #fff;
     border-radius: 5px;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
@@ -405,6 +394,27 @@ header .container nav .btns .btn.signup:hover {
     -o-border-radius: 5px;
     padding: calc(var(--main-y-padding) / 2) 0;
     box-shadow: 1px 1px 5px 3px #0000001a;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease-out;
+    -webkit-transition: opacity 0.4s ease-out;
+    -moz-transition: opacity 0.4s ease-out;
+    -ms-transition: opacity 0.4s ease-out;
+    -o-transition: opacity 0.4s ease-out;
+  }
+
+  header .container nav .btns {
+    display: none;
+  }
+
+  header .container nav.active {
+    visibility: visible;
+    opacity: 1;
   }
 
   /* start nav media ul */
@@ -536,9 +546,11 @@ header .container nav .btns .btn.signup:hover {
 
   header .container nav .btns .btn.signup {
     font-weight: 600;
-    background-image: linear-gradient(to right,
-        hsl(13, 100%, 72%),
-        hsl(353, 100%, 62%));
+    background-image: linear-gradient(
+      to right,
+      hsl(13, 100%, 72%),
+      hsl(353, 100%, 62%)
+    );
     padding: 6px 16px;
     color: #fff;
     border: none;
@@ -676,9 +688,11 @@ section:nth-of-type(1) .container .feature {
 }
 
 section:nth-of-type(2) {
-  background-image: linear-gradient(to right,
-      hsl(237, 17%, 21%),
-      hsl(237, 23%, 32%));
+  background-image: linear-gradient(
+    to right,
+    hsl(237, 17%, 21%),
+    hsl(237, 23%, 32%)
+  );
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
@@ -884,7 +898,7 @@ footer .container ul li:hover {
     padding-top: calc(var(--main-y-padding) * 2);
   }
 
-  footer .container>a {
+  footer .container > a {
     height: 50px;
   }
 
