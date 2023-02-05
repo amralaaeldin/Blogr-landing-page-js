@@ -102,6 +102,7 @@ header {
   font-family: "Ubuntu", sans-serif;
   color: hsl(0, 0%, 100%);
   border-bottom-left-radius: var(--border-radius);
+  overflow-x: hidden;
 }
 
 header .btn {
